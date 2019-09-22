@@ -1,0 +1,501 @@
+/*-----------------------------------------------------------------------------------
+    Template Name:	Dragon Forum
+    Template URI:	https://github.com/dragon-programming/forum
+    Author: 		Bin Emmanuel
+    Author URI:     https: //github.com/binbryan
+    Version:        1.0
+-----------------------------------------------------------------------------------*/
+
+/* Document
+   ========================================================================== */
+main{
+    margin: 75px 0;
+}
+.btn-cus,
+.mrg-top{
+    margin-top: 10px;
+}
+/*
+ * Icon
+ */
+.icon-x1 {
+    font-size: 15px !important;
+}
+.icon-x2{
+    font-size: 20px !important;
+}
+.icon-x3 {
+    font-size: 25px !important;
+}
+.icon-notification{
+    position: relative;
+    background: rgb(247, 64, 95);
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Header Sections.
+   ========================================================================== */
+.header-section {
+    position: fixed !important;
+    background: rgb(255, 255, 255);
+    top: 0;
+    color: rgb(154, 82, 82);
+    font-size: 25px;
+    border: 1px solid;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(139, 0, 0);
+    border-left-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 10px rgba(139, 0, 0, 0.62);
+    z-index: 1;
+}
+
+.header-section a{
+    color: rgb(154, 82, 82);
+    margin: 5px 0;
+}
+
+.header-section a:hover {
+    color: rgb(154, 82, 82);
+    margin: 5px 0;
+}
+
+.header-search-bar{
+    /* display: none; */
+    margin: 5px 0;
+}
+.logo img{
+    width: 58px;
+}
+/**
+ * Top .main-nav-menuigation Menu.
+ */
+.main-nav-menu{
+    font-size: 14px;
+    text-align: right;
+}
+
+.mobile-nav-menu-items,
+.main-nav-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav-menu ul li:first-child {
+    margin: 0;
+}
+
+.main-nav-menu ul li,
+.dropdown li{
+    background: inherit;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.main-nav-menu ul li:hover {
+    background: rgba(185, 144, 144, 0.35);
+    border-bottom: 2px solid rgb(139, 0, 0);
+}
+
+.main-nav-menu ul li:hover .dropdown{
+    visibility: visible;
+}
+
+.main-nav-menu .dropdown {
+    visibility: hidden;
+    background: rgb(171, 102, 102);
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 60px;
+    right: 139px;
+}
+.main-nav-menu .notification{
+    right: 236px;
+}
+.main-nav-menu ul a,
+.main-nav-menu ul a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-nav-menu ul:hover {
+    visibility: visible;
+    display: block;
+}
+
+.main-nav-menu .dropdown li {
+    display: block;
+    text-align: left !important;
+    border: none !important;
+}
+
+/**
+ * Mobile Navigation Menu.
+ */
+.mobile-nav-menu,
+.mobile-nav-menu-bar {
+    display: none;
+}
+
+/**
+ * Search Bar.
+ */
+.search-bar{
+    padding: 0;
+}
+
+.search-bar input[type=search] {
+    background: rgb(247, 242, 242);
+    text-align: center;
+    border: none;
+    font-size: 18px;
+    margin: 0;
+}
+
+.search-bar input[type=search]:focus {
+    outline: 0;
+}
+
+/* Main Sections.
+   ========================================================================== */
+/*
+ * Post Section.
+ */
+.posts-section,
+.add-posts-section{
+    background: inherit;
+}
+.post,
+.widget {
+    margin: 25px 0;
+    box-shadow: 3px 3px 11px rgba(195, 186, 186, 0.84);
+    border-radius: 5px;
+}
+.post-header,
+.post-body,
+.post-footer{
+    padding: 15px;
+    width: inherit;
+    word-wrap: break-word
+}
+.post-header h2{
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333;
+    word-wrap: break-word;
+}
+.user-name{
+    font-weight: bold;
+}
+.post-body {
+    padding-top: 0;
+}
+.edit-post{
+    float: right;
+}
+.post .profile-pic,
+.profile-pc-alt{
+    background: rgb(165, 165, 165);
+    border: 2px solid rgb(52, 58, 64);
+    border-radius: 100%;
+    text-align: center;
+    font-size: 54px;
+    width: 91px;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+}
+.post .profile-pic{
+    background: transparent !important; /* Remove the background color setted above (.profile-pic, .profile-pc-alt). */
+    border: 2px solid transparent !important; /* Remove the border setted above (.profile-pic, .profile-pc-alt). */
+}
+.user-img{
+    position: relative;
+    left: 500px;
+    padding: 0;
+}
+.user-img img{
+    position: absolute;
+    left: 0;
+    background: #999;
+    border: 2px solid rgb(52, 58, 64);
+    border-radius: 100%;
+    height: 88px;
+    width: 100%;
+}
+.user-img a,
+.user-img a:hover{
+    color: inherit;
+}
+.post-info{
+    margin: 0 0 10px 15px;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(183, 183, 183, 0.33);
+    width: fit-content;
+    color: #999;
+    font-size: 13px;
+}
+.post-info .user-name{
+    color: inherit;
+    text-decoration: none;
+}
+.post-info .user-name:hover {
+    color: rgb(52, 58, 64);
+}
+.post-footer{
+    background: rgba(232, 227, 227, 0.68);
+    box-shadow: 3px 3px 11px rgba(195, 186, 186, 0.84);
+}
+.post-footer ul {
+    text-shadow: 2px 2px 4px rgb(97, 96, 96);
+    color: rgba(97, 96, 96, 0.85);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.post-footer ul a{
+    color: rgba(97, 96, 96, 0.85);
+    text-decoration: none;
+}
+.post-footer ul a:hover,
+.post-footer ul li:hover{
+    color: rgb(52, 58, 64);
+}
+.post-footer ul li{
+    display: inline;
+    margin: 0 14px;
+    cursor: pointer;
+}
+
+/* Add Post Section */
+.profile,
+.new-posts-section{
+    padding-top: 25px;
+}
+select{
+    text-align: center !important;
+}
+
+textarea,
+select,
+input[type=text],
+input[type=password],
+input[type=email],
+.widget-body input[type=text],
+.widget-body input[type=password]{
+    background: rgb(74, 73, 75);
+    border: 1px solid rgba(74, 73, 75, 0.39);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    padding: 4px 10px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+input:focus,
+textarea:focus,
+textarea::placeholder,
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=email]::placeholder,
+input[type=search]::placeholder{
+    color: rgb(255, 255, 255);
+    font-weight: 400; 
+}
+select,
+input:hover,
+.ck.ck-editor,
+input{
+    box-shadow: 2px 2px 4px rgba(154, 82, 82, 0.58);
+    outline: none;
+}
+select:focus,
+.ck.ck-editor:focus,
+input:focus{
+    box-shadow: 2px 2px 4px rgb(154, 82, 82);
+    outline: none;
+}
+.btn-cus{
+    background: rgb(74, 73, 75);
+    color: rgb(255, 255, 255);
+    border: 1px solid;
+    border-radius: 5px;
+}
+/* Signup Form */
+.signup-form{
+    width: 30%;
+}
+.login-form input[type=text],
+.login-form input[type=password],
+.login-form input[type=email],
+.signup-form input[type=text],
+.signup-form input[type=password],
+.signup-form input[type=email],
+select,
+.login-form input[type=text]::placeholder,
+.login-form input[type=password]::placeholder,
+.login-form input[type=email]::placeholder,
+.signup-form input[type=text]::placeholder,
+.signup-form input[type=password]::placeholder,
+.signup-form input[type=email]::placeholder,
+select::placeholder{
+    background: rgba(247, 253, 255, 0.82);
+    color: rgb(154, 82, 82);
+}
+
+/* Profile */
+.profile .profile-pic{
+    text-align: center;
+}
+.profile .profile-pic img{
+    border: 2px solid rgb(52, 58, 64);
+    border-radius: 100%;
+    height: 214px;
+    width: 214px;
+}
+
+/* Footer Section */
+.footer-section{
+    background: rgba(166, 176, 195, 0.37);
+    border-top: 1px solid rgba(166, 176, 195, 0.81);
+    text-align: center;
+    margin: 0;
+    padding: 10px 5px;
+}
+
+/*
+ * Aside Section.
+ */
+.widget-header{
+    background: rgba(232, 227, 227, 0.68);
+    text-shadow: 2px 2px 4px rgb(97, 96, 96);
+    padding: 8px 15px;
+}
+.widget-body{
+    padding: 15px;
+}
+.widget-body ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* .widget-body input[type=text],
+.widget-body input[type=password],
+.widget-body input[type=text]::placeholder,
+.widget-body input[type=password]::placeholder{
+    background: white !important;
+    color: #000 !important;
+}
+.widget-body input[type=password]{
+    margin: 15px 0;
+} */
+.widget-item{
+    font-weight: 459;
+}
+
+/* Responsive Design.
+   ========================================================================== */
+/* Large Screen Size */
+@media (max-width: 1199px) {
+    .user-img{
+        left: 389px;
+    }
+}
+/* Large Screen Size */
+@media (max-width: 991px) {
+    .user-img {
+        left: 229px;
+    }
+}
+/* Medium Sreen Size */
+@media (max-width: 768px) {
+    .search-bar{
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .main-nav-menu {
+        display: none !important;
+    }
+    .user-img{
+        left: 280px;
+        top: -8px;
+    }
+    /* Mobile Navigation Menu */
+    .mobile-nav-menu-bar{
+        display: block;
+        background: linear-gradient(to bottom, rgba(204, 160, 160, 0.2), rgba(204, 160, 160, 0.92));
+        box-shadow: 2px 2px 6px rgba(185, 144, 144, 0.99);
+        border: 1px solid;
+        border-radius: 5px;
+        position: absolute !important;
+        width: 58px !important;
+        top: 11px;
+        right: 19px;
+        text-align: center;
+    }
+    .mobile-nav-menu-bar:hover{
+        background: linear-gradient(to top, rgba(204, 160, 160, 0.2), rgba(204, 160, 160, 0.92));
+        box-shadow: -2px 2px 6px rgba(185, 144, 144, 0.99);
+    }
+    .mobile-nav-menu-items{
+        margin: 20px 0;
+    }
+    .mobile-nav-menu-link,
+    .mobile-nav-menu-link:hover{
+        text-decoration: none;
+    }
+    .mobile-nav-menu-item{
+        text-align: center;
+        padding: 8px 10px;
+    }
+    .mobile-nav-menu-item:hover{
+        background: rgba(204, 160, 160, 0.92);
+        color: rgb(255, 255, 255);
+    }
+
+    /* Search Bar */
+    .header-search-bar input[type=search]{
+        background: rgba(204, 160, 160, 0.92);
+        border: 1px solid rgba(255, 255, 255);
+        border-radius: 5px;
+        text-align: center;
+        padding: 1px 10px;
+        width: 100%;
+        color: rgb(154, 82, 82);
+    }
+    .header-search-bar input[type=search]::placeholder{
+        color: rgb(154, 82, 82);
+    }
+
+    /* Widget Section. */
+    .widget-body {
+        font-size: 15px;
+    }
+}
+
+/* Small Screen.
+   ========================================================================== */
+@media (max-width: 497px) {
+    .user-img {
+        left: 241px
+    }
+}
+@media (max-width: 476px){
+    .user-img{
+        left: 227px;
+    }
+}
+@media (max-width: 463px) {
+    .user-img {
+        display: none;
+    }
+}

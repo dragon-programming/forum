@@ -9,6 +9,18 @@
  *
  * @version	1.0
  */
+// Include our functions.
+require 'functions.php';
+
+/**
+ * Project Directory.
+ */
+define('PROJECT_DIR', 'dragon-forum/');
+
+/**
+ * Class Directory.
+ */
+define('CLASS_DIR', 'libs/classes/');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database */
@@ -30,12 +42,12 @@ define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
 /**
- * For developers: WordPress debugging mode.
+ * For developers: Dragon Programming Forum debugging mode.
  *
  * Configure error reporting options
  * Change this to false to enable the display of notices during development.
  */
-define('IS_ENV_PRODUCTION', false);
+define('IS_ENV_PRODUCTION', true);
 
 error_reporting(E_ALL | E_STRICT);
 
@@ -45,3 +57,6 @@ ini_set('error_log', 'log/php-error.txt');
 
 // ** Set time zone to use date/time functions without warnings ** //
 date_default_timezone_set('Africa/Lagos'); //http://www.php.net/manual/en/timezones.php
+
+// Include our connection file.
+//require 'conn.php';
